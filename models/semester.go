@@ -3,16 +3,16 @@ package models
 import "time"
 
 type Semester struct {
-	ID                string
-	MinCredits        int
-	StartTime         time.Time
-	EndTime           time.Time
-	RegisterStartAt   time.Time
-	RegisterExpiresAt time.Time
-	CreatedAt         time.Time
-	CreatedBy         *uint
-	UpdatedAt         time.Time
-	UpdatedBy         *uint
+	ID                string    `json:"id"`
+	MinCredits        int       `json:"min_credits"`
+	StartTime         time.Time `json:"start_time"`
+	EndTime           time.Time `json:"end_time"`
+	RegisterStartAt   time.Time `json:"register_start_at"`
+	RegisterExpiresAt time.Time `json:"register_expires_at"`
+	CreatedAt         time.Time `json:"created_at"`
+	CreatedBy         *uint     `json:"created_by"`
+	UpdatedAt         time.Time `json:"updated_at"`
+	UpdatedBy         *uint     `json:"updated_by"`
 }
 
 func (Semester) TableName() string {
