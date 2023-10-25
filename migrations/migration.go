@@ -22,7 +22,7 @@ func Up(db *gorm.DB) error {
 		return fmt.Errorf("failed to instance, error: %v", err)
 	}
 
-	m, err := migrate.NewWithDatabaseInstance("file://./migration", "example", driver)
+	m, err := migrate.NewWithDatabaseInstance("file://./migrations", "example", driver)
 	if err != nil {
 		return err
 	}
